@@ -1,0 +1,531 @@
+  <!-----META SECTION----->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ClayHerbs</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- 🌐 Header with Menu Bar -->
+<header class="header">
+  <div class="container">
+    <!-- 🔷 Logo Image -->
+<div class="logo">
+  <a href="/">
+    <img src="image/clayherbs logo__.png" alt="ClayHerbs Logo" class="logo-img" />
+  </a>
+</div>
+
+    <!-- 📋 Navigation Menu -->
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Hotel Supplies</a>
+      <a href="#">Private Label</a>
+      <a href="#">Retail</a>
+      <a href="#">About</a>
+      <a href="#">Contact Us</a>
+    </nav>
+
+    <!-- 🛒 Icons -->
+    <div class="header-icons">
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+  </div>
+</header>
+
+<!-- 💫 Hero Section -->
+<section class="hero-slider">
+  <div class="slide active">
+    <img src="image/1774 x 591.png" alt="Slide 1" class="hero-img" />
+    <div class="overlay"></div>
+    <div class="content" data-aos="fade-up">
+      <h1>Welcome to ClayHerbs</h1>
+      <p>Natural Skincare & Hotel Toiletries</p>
+      <a href="#products" class="cta-button">Shop Now</a>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="image/1774 x 591 2.png" alt="Slide 2" class="hero-img" />
+    <div class="overlay"></div>
+    <div class="content" data-aos="fade-up">
+      <h1>100% Organic</h1>
+      <p>Crafted with nature for purity & care</p>
+      <a href="#products" class="cta-button">Explore</a>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="image/1800 x 1000 copy 2 (1).png" alt="Slide 3" class="hero-img" />
+    <div class="overlay"></div>
+    <div class="content" data-aos="fade-up">
+      <h1>Eco-Friendly Luxury</h1>
+      <p>Sustainable, Stylish, Spa-grade</p>
+      <a href="#products" class="cta-button">View More</a>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <button class="nav prev">&#10094;</button>
+  <button class="nav next">&#10095;</button>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  const showSlide = (index) => {
+    slides.forEach((s, i) => {
+      s.classList.remove('active');
+      if (i === index) s.classList.add('active');
+    });
+  };
+
+  document.querySelector('.next').addEventListener('click', () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
+
+  document.querySelector('.prev').addEventListener('click', () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
+
+  // Auto slide
+  setInterval(() => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }, 5000);
+</script>
+</section>
+
+<script src="app.js"></script>
+        </div>
+      </div>
+    </div>
+    <section class="avd-section">
+  <h2 class="avd-title">Why Choose ClayHerbs?</h2>
+  <div class="avd-container">
+    
+    <div class="avd-card">
+      <div class="avd-inner">
+        <div class="avd-front">
+          <i class="fas fa-leaf"></i>
+          <h3>Eco-Friendly</h3>
+          <p>All our products are crafted using natural, biodegradable ingredients.</p>
+        </div>
+        <div class="avd-back">
+          <p>We reduce plastic waste with sustainable packaging for hotels and homes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="avd-card">
+      <div class="avd-inner">
+        <div class="avd-front">
+          <i class="fas fa-spa"></i>
+          <h3>Luxury Feel</h3>
+          <p>Designed for a premium experience in hotels, spas, and guest rooms.</p>
+        </div>
+        <div class="avd-back">
+          <p>Soft on skin, yet powerful in performance with rich fragrance & feel.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="avd-card">
+      <div class="avd-inner">
+        <div class="avd-front">
+          <i class="fas fa-recycle"></i>
+          <h3>Recyclable</h3>
+          <p>All bottles and pouches are fully recyclable or reusable.</p>
+        </div>
+        <div class="avd-back">
+          <p>Commitment to circular economy practices in every product we make.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<section class="category-section">
+  <h2 class="category-title">Shop by Category</h2>
+  <div class="category-grid">
+    
+    <div class="category-card">
+      <img src="image/shampoo1.jpg" alt="Shampoo">
+      <h3>Shampoo</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="image/212 x 180 conditioner.png" alt="Conditioner">
+      <h3>Conditioner</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="image/212 x 180 shower gel.png" alt="Shower Gel">
+      <h3>Shower Gel</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="image/212 x 180 bodylotion_.png" alt="Body Lotion">
+      <h3>Body Lotion</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="image/212 x 180 soap.png" alt="Soap">
+      <h3>Soap</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="image/212 x 180 dental kit.png" alt="Dental Kit">
+      <h3>Dental Kit</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="image/212 x 180 shaving kit.png" alt="Shaving Kit">
+      <h3>Shaving Kit</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="image/212 x 180 tolataries kit.png" alt="Toiletries Kit">
+      <h3>Toiletries kit</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="image/212 x 180 comb.png" alt="Comb">
+      <h3>Comb</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="image/400 x 300 copy 3.png" alt="Soap">
+      <h3>Soap</h3>
+    </div>
+  </div>
+</section>
+<Div>
+  <DIv>
+    
+    <!-- 🌿 Fullscreen Benefits Section -->
+<section class="benefit-full-banner">
+  <div class="benefit-overlay"></div>
+  <div class="benefit-inner">
+
+    <div class="benefit-box fade-up delay-1">
+      <i class="fas fa-vial"></i>
+      <h3>Spa‑Inspired Textures & Scents</h3>
+      <p>Immerse guests in botanical-rich aromas and creamy textures reminiscent of luxury spa rituals.</p>
+    </div>
+
+    <div class="benefit-box fade-up delay-2">
+      <i class="fas fa-seedling"></i>
+      <h3>Eco-Conscious by Design</h3>
+      <p>Refill-able or recyclable containers reflect your commitment to sustainability—minimizing single-use waste while maximizing style.</p>
+    </div>
+
+    <div class="benefit-box fade-up delay-3">
+      <i class="fas fa-ban"></i>
+      <h3>Hospitality-Grade Quality</h3>
+      <p>Crafted to complement discerning environments, our premium blends align with iconic hotel brands known for luxurious in-room experiences.</p>
+    </div>
+
+    <div class="benefit-box fade-up delay-4">
+      <i class="fas fa-award"></i>
+      <h3>Inclusive and Gentle</h3>
+      <p>Free from harsh chemicals—our formulas are validated for all hair types and skin sensitivities, ensuring every guest feels cared for.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  </DIv>
+</Div>
+<div>
+
+  <section class="product-showcase">
+  <h2 class="section-title">Explore Our Bestsellers</h2>
+
+  <div class="product-grid">
+
+    <!-- Product Card 1 -->
+    <div class="product-card">
+      <img src="image/400 x 300.png" alt="Herbal Shampoo" />
+      <div class="product-info">
+        <h3>Herbal Shampoo</h3>
+        <p>₹249</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-card">
+      <img src="image/400 x 300 copy.png" alt="Moisturizing Conditioner" />
+      <div class="product-info">
+        <h3>Moisturizing Conditioner</h3>
+        <p>₹269</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="product-card">
+      <img src="image/400 x 300 copy 3.png" alt="Organic Body Wash" />
+      <div class="product-info">
+        <h3>Organic Body Wash</h3>
+        <p>₹199</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="product-card">
+      <img src="image/400 x 300 copy 2.png" alt="Herbal Hand Wash" />
+      <div class="product-info">
+        <h3>Herbal Hand Wash</h3>
+        <p>₹179</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+
+  <!-- Testimonial Section -->
+ <!-- ⭐ Customer Reviews Section -->
+<section class="testimonials">
+  <h2 class="section-title">What Our Customers Say</h2>
+
+  <div class="review-grid">
+
+    <!-- Review 1 -->
+    <div class="review-card">
+      <img src="https://i.pravatar.cc/100?img=12" alt="Customer 1" class="avatar">
+      <h3>Aditi Sharma</h3>
+      <p class="stars">★★★★★</p>
+      <p class="review">I loved the herbal shampoo! It smells divine and leaves my hair feeling fresh and soft. Great packaging too!</p>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="review-card">
+      <img src="https://i.pravatar.cc/100?img=20" alt="Customer 2" class="avatar">
+      <h3>Rahul Verma</h3>
+      <p class="stars">★★★★☆</p>
+      <p class="review">The body wash has an amazing texture and is gentle on skin. Definitely ordering again for my hotel rooms.</p>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="review-card">
+      <img src="https://i.pravatar.cc/100?img=45" alt="Customer 3" class="avatar">
+      <h3>Neha Mehta</h3>
+      <p class="stars">★★★★★</p>
+      <p class="review">ClayHerbs products are eco-friendly and effective. My guests really appreciated the premium quality.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Shop by Collection Section -->
+<section class="shop-section">
+  <h2>Shop by Collection</h2>
+
+  <!-- FILTERS -->
+  <div class="filters">
+    <div>
+      <label for="sizeFilter">Size:</label>
+      <select id="sizeFilter">
+        <option value="all">All</option>
+        <option value="10ml">10ml</option>
+        <option value="25ml">25ml</option>
+        <option value="60ml">60ml</option>
+        <option value="120ml">120ml</option>
+      </select>
+    </div>
+    <div>
+      <label for="priceFilter">Price:</label>
+      <select id="priceFilter">
+        <option value="all">All</option>
+        <option value="under-500">Under ₹500</option>
+        <option value="500-2000">₹500 – ₹2000</option>
+        <option value="2000-5000">₹2000 – ₹5000</option>
+        <option value="above-5000">Above ₹5000</option>
+      </select>
+    </div>
+  </div>
+  <!-- Products Row -->
+  <div class="product-grid">
+
+    <!-- Product Card 1 - Hero Image -->
+    <div class="product-hero">
+      <img src="image/280 x 430.png" alt="Hero Product">
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-card">
+      <span class="ribbon">NEW LAUNCH</span>
+      <img src="image/212 x 180 bodylotion_.png" alt="Product 1">
+      <h3>FIGURE IT OUT EDP 120ML - 3 PIECE SET</h3>
+      <p class="price">₹6,999</p>
+      <p class="rating">⭐ 4.9 | <span>1 Review</span></p>
+      <button>Add to Cart</button>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="product-card">
+      <span class="ribbon">NEW LAUNCH</span>
+      <img src="image/212 x 180 conditioner.png" alt="Product 2">
+      <h3>FIGURE IT OUT EDP 60ML - 2 PIECE SET</h3>
+      <p class="price">₹4,999</p>
+      <p class="rating">⭐ 4.9 | <span>1 Review</span></p>
+      <button>Add to Cart</button>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="product-card">
+      <span class="ribbon">NEW LAUNCH</span>
+      <img src="image/212 x 180 dental kit.png" alt="Product 3">
+      <h3>FIGURE IT OUT EDP 10ML</h3>
+      <p class="price">₹1,199</p>
+      <p class="rating">⭐ 4.9 | <span>1 Review</span></p>
+      <button>Add to Cart</button>
+    </div>
+    <script src="app.js"></script>
+
+  </div>
+
+  <!-- View All -->
+  <div class="view-all">
+    <a href="#">View all</a>
+  </div>
+</section>
+
+
+<!-- 💼 Our Brands Slider Section -->
+<section class="brand-slider-section">
+  <h2>Our Brands</h2>
+  <div class="brand-slider">
+    <div class="brand-track">
+      <!-- Repeat logos for seamless loop -->
+      <img src="image/clayherbs.png" alt="Clayherbs">
+      <img src="image/earthnatural.png" alt="Clayherbs">
+      <img src="image/auro360.png" alt="Clayherbs">
+      <img src="image/mystique.png" alt="Clayherbs">
+      <img src="image/roots.png" alt="Clayherbs">
+      <img src="image/vinsan.png" alt="Clayherbs">
+      <img src="image/the regal veda.png" alt="Clayherbs">
+    </div>
+  </div>
+</section>
+<Div>
+  <!-- 🌿 Fullscreen Benefits Section -->
+<section class="benefit-full-banner">
+  <div class="benefit-overlay"></div>
+  <div class="benefit-inner">
+
+    <div class="benefit-box fade-up delay-1">
+      <i class="fas fa-vial"></i>
+      <h3>Paraben Free</h3>
+      <p>We ensure only safe, non-toxic ingredients with no parabens ever used.</p>
+    </div>
+
+    <div class="benefit-box fade-up delay-2">
+      <i class="fas fa-seedling"></i>
+      <h3>100% Vegan</h3>
+      <p>All our products are cruelty-free and entirely plant-based.</p>
+    </div>
+
+    <div class="benefit-box fade-up delay-3">
+      <i class="fas fa-ban"></i>
+      <h3>0% Phthalate</h3>
+      <p>No harmful phthalates — only skin-loving ingredients for you.</p>
+    </div>
+
+    <div class="benefit-box fade-up delay-4">
+      <i class="fas fa-award"></i>
+      <h3>GMP Certified</h3>
+      <p>Produced under certified Good Manufacturing Practices for quality and safety.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</Div>
+
+
+<!-- 🌿 ClayHerbs Footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- 🌱 About -->
+    <div class="footer-box">
+      <h3>ClayHerbs</h3>
+      <p>Luxury hotel toiletries and spa essentials designed for comfort and sustainability. Plastic-free, eco-smart, and beautifully packaged.</p>
+    </div>
+
+    <!-- ⚡ Quick Links -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- 💌 Newsletter -->
+    <div class="footer-box">
+      <h3>Subscribe</h3>
+      <p>Get updates on eco-friendly products and discounts!</p>
+      <form>
+        <input type="email" placeholder="Your email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- ☎ Contact Info -->
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-envelope"></i> vmtgroup2019@gmail.com</p>
+      <p><i class="fas fa-phone-alt"></i> +91 99902-49999</p>
+      <p><i class="fas fa-map-marker-alt"></i> Plot no-6, Shivaji Enclave, Rajouri Garden, New Delhi-110027</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 🌍 Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2025 ClayHerbs. All rights reserved.</p>
+  </div>
+
+  <!-- 💬 WhatsApp Button -->
+  <a href="https://wa.me/918826617169" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo">
+  </a>
+</footer>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
